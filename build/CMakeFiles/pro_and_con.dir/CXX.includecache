@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ADMIN/Desktop/asyn_1_thread/Consumer.cpp
+Consumer.h
+C:/Users/ADMIN/Desktop/asyn_1_thread/Consumer.h
+iostream
+-
+
+C:/Users/ADMIN/Desktop/asyn_1_thread/Consumer.h
+Producer.h
+C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
+
+C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
+queue
+-
+
+C:/Users/ADMIN/Desktop/asyn_1_thread/main.cpp
+iostream
+-
+thread
+-
+Producer.h
+C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
+Consumer.h
+C:/Users/ADMIN/Desktop/asyn_1_thread/Consumer.h
+

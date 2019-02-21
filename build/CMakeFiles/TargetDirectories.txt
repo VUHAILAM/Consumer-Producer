@@ -1,0 +1,3 @@
+C:/Users/ADMIN/Desktop/asyn_1_thread/build/CMakeFiles/pro_and_con.dir
+C:/Users/ADMIN/Desktop/asyn_1_thread/build/CMakeFiles/edit_cache.dir
+C:/Users/ADMIN/Desktop/asyn_1_thread/build/CMakeFiles/rebuild_cache.dir
