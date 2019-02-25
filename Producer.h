@@ -13,6 +13,8 @@ class Producer {
         void generateNumber();
         int topNumber();
         bool isEmpty();
+        void displayQueue();
+        
 };
 
 #endif //PRODUCER_H

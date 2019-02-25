@@ -3,13 +3,14 @@
 #include <iostream>
 
 Consumer::Consumer() {
-    producer = new Producer();
 }
 
 Consumer::~Consumer() {
 
 }
 
-void Consumer::printNumber() {
-    std::cout << "Consumer take " << producer.topNumber << std::endl;
+void Consumer::printNumber(Producer *pro) {
+    while(!pro->isEmpty()) {
+        std::cout << "Consumer take " << pro->topNumber() << std::endl;
+    }
 }

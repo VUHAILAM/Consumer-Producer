@@ -6,11 +6,10 @@
 class Consumer
 {
     private:
-        Producer producer;
     public:
         Consumer();
         ~Consumer();
-        void printNumber();
+        void printNumber(Producer *pro);
         
 };
 
