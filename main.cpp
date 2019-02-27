@@ -14,7 +14,7 @@ int main() {
     printPro.join();
     printCon.join();
 
-    pro.displayQueue();
+    //pro.displayQueue();
 
     return 0;
 }

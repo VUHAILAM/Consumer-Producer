@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <random>
+#include <chrono>
+#include <thread>
 
 Producer::Producer() {
     m_queue.push(999);
@@ -33,6 +35,7 @@ void Producer::generateNumber() {
         int number = num(gen);
         std::cout << "Producer generate " << number << std::endl;
         m_queue.push(number);
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
 }
 
