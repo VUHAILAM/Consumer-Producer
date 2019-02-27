@@ -2,8 +2,7 @@
 
 #include <iostream>
 #include <random>
-#include <chrono>
-#include <thread>
+
 
 Producer::Producer() {
     m_queue.push(999);
@@ -27,6 +26,10 @@ int Producer::topNumber() {
 }
 
 void Producer::generateNumber() {
+    if(m_pro_thread.joinable()) {
+        m_pro_thread.join();
+    }
+    
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> num(1, 100);
@@ -39,11 +42,14 @@ void Producer::generateNumber() {
     }
 }
 
- void Producer::displayQueue() {
+void Producer::displayQueue() {
         while(!m_queue.empty()){
             std::cout << m_queue.front() << " ";
             m_queue.pop();
-        }
-        
-        
-    }
+        }          
+}
+
+void Producer::run() {
+    m_pro_thread = std::thread(&Producer::generateNumber, this);
+}
+

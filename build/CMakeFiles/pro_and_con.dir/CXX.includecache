@@ -20,19 +20,21 @@ C:/Users/ADMIN/Desktop/asyn_1_thread/Consumer.h
 Producer.h
 C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
 
-C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.cpp
-Producer.h
 C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
-iostream
--
-random
--
 chrono
 -
 thread
 -
-
-C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
 queue
 -
+
+C:/Users/ADMIN/Desktop/asyn_1_thread/main.cpp
+iostream
+-
+thread
+-
+Producer.h
+C:/Users/ADMIN/Desktop/asyn_1_thread/Producer.h
+Consumer.h
+C:/Users/ADMIN/Desktop/asyn_1_thread/Consumer.h
 

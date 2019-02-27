@@ -1,12 +1,14 @@
 #ifndef PRODUCER_H
 #define PRODUCER_H
 
+#include <chrono>
+#include <thread>
 #include <queue>
 
 class Producer {
     private:
         std::queue<int> m_queue;
-
+        std::thread m_pro_thread;
     public:
         Producer();
         ~Producer();
@@ -14,7 +16,7 @@ class Producer {
         int topNumber();
         bool isEmpty();
         void displayQueue();
-        
+        void run();
 };
 
 #endif //PRODUCER_H

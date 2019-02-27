@@ -8,11 +8,11 @@ int main() {
     Producer pro;
     Consumer con;
 
-    std::thread printPro(&Producer::generateNumber, &pro);
-    std::thread printCon(&Consumer::printNumber, &con, &pro);
+    //std::thread printPro(&Producer::generateNumber, &pro);
+    //std::thread printCon(&Consumer::printNumber, &con, &pro);
    
-    printPro.join();
-    printCon.join();
+    pro.run();
+    con.run(&pro);
 
     //pro.displayQueue();
 
