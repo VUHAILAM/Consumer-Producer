@@ -5,12 +5,11 @@
 
 
 Producer::Producer() {
-    m_queue.push(999);
-    m_queue.push(888);
+
 }
 
 Producer::~Producer() {
-
+    
 }
 
 bool Producer::isEmpty() {
@@ -26,10 +25,6 @@ int Producer::topNumber() {
 }
 
 void Producer::generateNumber() {
-    if(m_pro_thread.joinable()) {
-        m_pro_thread.join();
-    }
-    
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> num(1, 100);
@@ -50,6 +45,9 @@ void Producer::displayQueue() {
 }
 
 void Producer::run() {
-    m_pro_thread = std::thread(&Producer::generateNumber, this);
+    m_pro_thread = std::thread(&Producer::generateNumber, this); 
+    if(m_pro_thread.joinable()) {
+        m_pro_thread.join();
+    }
 }
 
