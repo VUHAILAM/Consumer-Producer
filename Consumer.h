@@ -7,11 +7,12 @@ class Consumer
 {
     private:
         std::thread m_con_thread;
+        Producer *m_pro;
     public:
-        Consumer();
+        Consumer(Producer *pro);
         ~Consumer();
-        void printNumber(Producer *pro);
-        void run(Producer *pro);
+        void printNumber();
+        void run();
 };
 
 #endif //CONSUMER_H

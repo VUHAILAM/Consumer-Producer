@@ -5,16 +5,11 @@
 #include "Consumer.h"
 
 int main() {
-    Producer pro;
-    Consumer con;
-
-    //std::thread printPro(&Producer::generateNumber, &pro);
-    //std::thread printCon(&Consumer::printNumber, &con, &pro);
+    Producer* pro = new Producer();
+    Consumer* con = new Consumer(pro);
    
-    pro.run();
-    con.run(&pro);
-
-    //pro.displayQueue();
+    pro->run();
+    con->run();
 
     return 0;
 }
