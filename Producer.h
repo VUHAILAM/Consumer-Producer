@@ -13,7 +13,7 @@ class Producer {
         Producer();
         ~Producer();
         void generateNumber();
-        int topNumber();
+        int takeTopNumber();
         bool isEmpty();
         void displayQueue();
         void run();

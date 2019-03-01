@@ -16,7 +16,7 @@ bool Producer::isEmpty() {
     return m_queue.empty();
 }
 
-int Producer::topNumber() {
+int Producer::takeTopNumber() {
     if (!m_queue.empty()) {
         int topNumber = m_queue.front();
         m_queue.pop();

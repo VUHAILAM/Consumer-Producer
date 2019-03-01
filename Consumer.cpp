@@ -15,7 +15,7 @@ Consumer::~Consumer() {
 void Consumer::printNumber() {
     
     while(!m_pro->isEmpty()) {
-        std::cout << "Consumer take " << m_pro->topNumber() << std::endl;
+        std::cout << "Consumer take " << m_pro->takeTopNumber() << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
 }
